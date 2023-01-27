@@ -1,0 +1,198 @@
+@import url('https://fonts.cdnfonts.com/css/monster-hunter');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
+/* Reseteamos los estilos por defecto del navegador */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+/* Aplicamos una imagen de fondo y aplicamos una fuente */
+/*
+body{
+    background-image: url(../img/desktop.jpg);
+   
+} */
+
+body {
+    background-image: url(../img/mobile.png);
+    /* backdrop-filter: blur(2px); */
+    background-size: cover;
+  }
+  h1{
+     text-align: center;
+     width: 100%;
+     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+     color: white;
+     
+  }
+/* Borramos decoraciones de enlaces y listas */
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+/* Personalizamos aspectos basicos de la barra de navegacion */
+
+/* Propiedades de la palabra "Monsterpedia" de la barra de navegación */
+.nombre{
+    display: inline-block;
+    color: white;
+    font-family: 'Monster Hunter', sans-serif;
+    font-size: 48px;
+    margin-left: 10px;
+}
+
+.barra{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: black;
+    overflow: hidden;
+}
+
+.menu a{
+    display: block;
+    padding: 30px;
+    color: white;
+}
+
+.menu a:hover{
+    background-color: grey;
+}
+
+.barra{
+    max-height: 0;
+    transition: max-height .5 ease-out;
+}
+
+/* menu */
+.hamb{
+    cursor:pointer; 
+     float: right;
+    padding: 22px 20px; 
+    
+}
+
+/* con esto vamos a pintar la linea del medio del icono */
+.icono{
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+}
+/* Y con esto la anterior y la posterior */
+.icono::before,.icono::after{
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2 ease-out;
+    width: 100%;
+}
+/* Colocamos la separacion de las barras */
+.icono::before{
+    top:5px;
+    
+}
+.icono::after{
+    top: -5px;
+}
+
+/* Escondemos el checkbox */
+.menulateral{
+    display: none;
+}
+
+/* Si se checkea el checkbox  vamos a hacer una serie de cosas con las barras mencionadas justo en las lineas anteriores */
+.menulateral:checked ~ nav{
+    max-height: 100%;
+}
+
+/* una (la central) la ocultamos */
+.menulateral:checked ~ .hamb .icono{
+    background-color: transparent;
+}
+
+/* y las otras dos las rotamos */
+.menulateral:checked ~ .hamb .icono::before{
+    transform: rotate(-50deg);
+    top: 0;
+}
+
+.menulateral:checked ~ .hamb .icono::after{
+    transform: rotate(50deg);
+    top: 0;
+}
+
+article p,h3{
+    font-family: 'Unbounded', cursive;
+    text-align: justify;
+    
+}
+
+article{
+    margin-left: 30px;
+    margin-right: 30px;
+    
+}
+
+@media (min-width:768px){
+
+    /* le damos a la barra un estilo que se vean todas las opciones sin tener que pulsar ningun boton */
+     .barra{        
+        max-height: none;
+        top: -10px;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: yellow;
+
+    }
+
+    .menu a{        
+        padding: 14px;
+        padding-top: 10px;
+        font-size: large;
+    }
+
+    /* ocultamos el label del boton ya que no nos interesa en estas resoluciones */
+    .hamb{
+        display: none;
+    }
+}
+
+/* @media only screen and (max-width: 600px) {
+    body {
+      background-image: url(../img/mobile.png);
+      background-size: cover;
+    }
+    h1{
+       text-align: center;
+       width: 100%;
+       text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+       color: white;
+    }
+
+
+} */
+.header{
+    background-color: black;
+    box-shadow: 1px 1px 3px 0px grey;
+    position:sticky;
+    top: 0;
+    width: 100%;
+}
+
