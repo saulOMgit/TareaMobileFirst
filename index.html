@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">    
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/estiloindex.css">
+    <title>Monsterpedia</title>
+</head>
+<body>   
+        <!-- Barra de navegacion -->
+        <header class="header">
+            <!-- Inicio -->
+            <a href="#" class="nombre">Monsterpedia</a>
+            <!-- Icono desplegable -->
+            <input type="checkbox" class="menulateral" id="menulateral"/>
+            <label for="menulateral" class="hamb"><span class="icono"></span></label>
+            <!-- Opciones -->
+            <nav class="barra">            
+                <ul class="menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#Bienvenidx">Rathalos</a></li>
+                    <li><a href="#Nargacuga">Templo Olvidado</a></li>
+                    <li><a href="#Rathian">Trailer</a></li>
+                    
+                </ul>                
+            </nav>
+        </header>
+      
+        <main>
+            <article id="Bienvenidx" class="audio">
+            <h1>Bienvenidos a la pagina de Inicio de Monster Hunter Rise</h1>
+            <p>Monster Hunter Rise es un juego de rol de acción desarrollado y publicado por Capcom para Nintendo Switch. 
+                Es la entrega más reciente de la saga portátil, perteneciendo a la quinta generación de la saga, al igual 
+                que World y se lanzó en todo el mundo el 26 de marzo de 2021</p>
+                <audio controls>            
+                    <source src="./sound/maintheme.mp3" type="audio/mpeg">
+                      Audio no soportado por el navegador.
+                </audio>
+            </article>     
+        <article id="Nargacuga">
+            <h1>Templo Olvidado</h1>
+            <figure>
+                <img src="./img/temploolvidado.png" alt="Templo Olvidado" title="Templo Olvidado">
+                <figcaption>Templo Olvidado</figcaption>
+            </figure>
+            <p>Un santuario que en su día albergó rezos y protección. Hoy se halla en ruinas, y solo el rugido de los monstruos 
+                lo habita día y noche. Sin embargo, sigue siendo un lugar sagrado, y exuda un cierto aire de misterio.</p>
+
+            <span><a href="./monsters.html">Ver Monstruos</a></span>
+        </article>
+        <article id="Rathian">
+            <h1>Trailer de Lanzamiento</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LbrpBkL-VEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <a href="https://store.steampowered.com/app/1446780/MONSTER_HUNTER_RISE/"><img src="./img/Steam.svg" alt="Enlace a Steam"></a>
+        </article>       
+        
+    </main>
+</body>
+</html>

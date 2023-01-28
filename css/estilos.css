@@ -151,6 +151,12 @@ article{
     
 }
 
+img{
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
+}
 @media (min-width:768px){
 
     /* le damos a la barra un estilo que se vean todas las opciones sin tener que pulsar ningun boton */
@@ -181,6 +187,11 @@ article{
     /* ocultamos el label del boton ya que no nos interesa en estas resoluciones */
     .hamb{
         display: none;
+    }
+
+    img{
+        height: calc(614px/2);
+        width: 500px;
     }
 }
 
